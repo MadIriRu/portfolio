@@ -1,0 +1,242 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	color: white;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* styling header */
+header {
+	width: 100%;
+	min-height: 70px;
+	/* height: fit-content; */
+	background-color: #be3144;
+	color: white;
+	/* padding: 10px; */
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-bottom: 2px solid rgba(85, 85, 85, 0.5);
+}
+nav {
+	font-size: 1.4em;
+	margin-right: 40px;
+}
+
+nav.navbar ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+nav.navbar li {
+	list-style: none;
+	margin: 0;
+}
+nav.navbar li a {
+	color: white;
+	padding: 0 1rem;
+	letter-spacing: 0.1rem;
+	font-stretch: expanded;
+	text-shadow: 0.5px -0.5px 1px white;
+}
+nav.navbar li:hover {
+	background-color: #555;
+}
+/* start of not used in this code */
+.toggle-button {
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 31px;
+	height: 21px;
+}
+.toggle-button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+}
+/* end of not used in this code */
+
+/* media query for navbar */
+@media (max-width: 600px) {
+	/* .toggle-button {
+		display: flex;
+	} */
+	nav {
+		display: none;
+		width: 100%;
+	}
+	header {
+		display: block;
+	}
+	nav.navbar {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+	}
+	nav.navbar ul {
+		width: 100%;
+		flex-direction: column;
+	}
+	nav.navbar li {
+		text-align: center;
+		margin: 0.5rem;
+	}
+}
+
+/* section {
+	width: 100%;
+} */
+
+section {
+	align-items: center;
+}
+
+/* welcome section styling */
+#welcome-section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	background-color: black;
+	background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+/* #welcome-section h1 { */
+h1 {
+	font-size: 3.8rem;
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	color: white;
+	margin: 0;
+}
+#welcome-section p {
+	margin: 0;
+	color: #be3144;
+	font-weight: 200;
+	font-size: 1.8rem;
+	font-style: italic;
+}
+/* projects section styling */
+
+#projects {
+	background-color: #45567d;
+	text-align: center;
+	padding-bottom: 100px;
+}
+#projects h2 {
+	max-width: 640px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 90px;
+	color: white;
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 2.7rem;
+	border-bottom: 2px solid white;
+}
+
+div.projects-grid {
+	width: 90%;
+	margin: 70px auto 60px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-auto-rows: minmax(200px auto); */
+	grid-template-rows: repeat(2, minmax(300px, auto));
+	gap: 30px;
+}
+img.project-image {
+	/* height: calc(100% - 6.8rem); */
+	width: 395px;
+	height: 395px;
+	object-fit: cover;
+	display: block;
+}
+
+a.project-tile p {
+	color: white;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #303841;
+	padding: 1.5rem;
+}
+a.project-tile p span {
+	display: none;
+}
+a.project-tile:hover p span {
+	display: inline;
+	color: orange;
+}
+
+a.showall {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background-color: #303841;
+	color: white;
+	font-size: 1.5rem;
+	border-radius: 5px;
+}
+a.showall:hover {
+	background-color: #be3144;
+}
+
+/* contacts section styles */
+#contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 80vh;
+	background-color: #303841;
+}
+
+#contacts p {
+	margin: 0;
+	color: white;
+	font-weight: 200;
+	font-size: 1.8rem;
+	font-style: italic;
+}
+.how_to_contact {
+	margin: 2rem auto 2rem;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 1.2rem;
+}
+a.contact_link {
+	color: white;
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 1px #1f1f1f;
+	text-align: center;
+}
+/* footer styles */
+footer {
+	background-color: #303841;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 2px solid #be3144;
+	height: 18vh;
+	font-size: 1.2rem;
+	font-weight: 200;
+}
+
+/* footer p {
+	display: space-between;
+} */
